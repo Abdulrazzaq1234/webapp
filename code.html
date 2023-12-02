@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Friends</title>
+<link rel="stylesheet" href="code.css">
+</head>
+<body>
+<div class="container">
+  
+<header>
+    <h2>Friends</h2>
+   
+</header>
+<div id="nan"><button><h4>Following</h4></button>
+<button><h4>Followers</h4></button></div>
+<main>
+<section class="friends-section">
+<div class="friends-list">
+<div class="friend-item">
+<!-- <img src="https://example.com/avatar1.png" alt="Avatar"> -->
+
+<h2 class="friend-name">Aarav</h2>
+<p class="friend-id">Id: KK1UGHU</p>
+</div>
+<div class="friend-item">
+<!-- <img src="https://example.com/avatar2.png" alt="Avatar"> -->
+<h2 class="friend-name">Rohit Singh</h2>
+<p class="friend-id">Id: ICYEBL</p> 
+</div>
+<div class="friend-item">
+<!-- <img src="https://example.com/avatar3.png" alt="Avatar"> -->
+<h2 class="friend-name">Mahesh</h2>
+<p class="friend-id">Id: BRZTXE</p>
+</div>
+<div class="friend-item">
+<!-- <img src="https://example.com/avatar4.png" alt="Avatar"> -->
+<h2 class="friend-name">Anurag Mishra   </h2>
+<p class="friend-id">Id: ABB158C7</p>
+</div>
+<div class="friend-item">
+<!-- <img src="https://example.com/avatar5.png" alt="Avatar"> -->
+<h2 class="friend-name">Algo346 </h2>
+
+<p class="friend-id">Id: VANCHIO2</p>
+
+</div>
+
+</div>
+</section>
+</main>
+</div>
+<nav>
+    <a href="#">Games</a>
+    <a href="#">Voice Ludo</a>
+    <a href="#">Friends</a>
+    <a href="#" class="active">Profile</a>
+    </nav>
+<script >
+  // Get the friends list element
+const friendsList = document.querySelector('.friends-list');
+
+// Add a click event listener to each friend item
+friendsList.querySelectorAll('.friend-item').forEach((item) => {
+  item.addEventListener('click', () => {
+    // Get the friend ID
+    const friendId = item.querySelector('.friend-id').textContent.split(':')[1].trim();
+
+    // Open the friend profile page
+    window.open(`/profile/${friendId}`);
+  });
+});
+
+
+</script>
+</body>
+</html>
